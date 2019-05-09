@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>OAuth Tutorials</title>
+        <title>OAuth PassportJS - Nguyen Hai Dang</title>
         <style>
             body{
                 font-family: arial;
@@ -41,17 +41,20 @@
     <body>
         <nav>
             <ul>
-                <li><a href="/auth/logout">Logout</a></li>
-                <li><a href="/auth/login">Login</a></li>
+                <% if (user) { %>
+                    <li><a href="/auth/logout">Log out</a></li>
+                <% } else { %>
+                    <li><a href="/auth/login">Login</a></li>
+                <% } %>
                 <li><a href="/">Homepage</a></li>
+                <li><a href="/profile">Profile</a></li>
             </ul>
         </nav>
         <header>
-            <h1>Nguyen Hai Dang</h1>
-            <h2>Homepage</h2>
+            <h1>Homepage</h1>
         </header>
         <main>
-            <p>Probably the best OAuth tutorials on the planet :)</p>
+            <p style="font-style: italic">Contact: nguyen.dang@orient.com</p>
         </main>
     </body>
 </html>
