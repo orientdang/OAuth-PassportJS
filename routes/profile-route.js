@@ -5,7 +5,6 @@ const authCheck = (req, res, next) => {
         next();
     } else {
         res.redirect("/");
-        next();
     }
 };
 
